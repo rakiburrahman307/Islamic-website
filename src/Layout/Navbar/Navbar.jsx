@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IoIosSettings } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
+import { TbBooks } from "react-icons/tb";
 import "./sidebar.css";
 
 const Navbar = () => {
@@ -11,7 +12,7 @@ const Navbar = () => {
     <nav className='flex items-center justify-between bg-white px-4 py-2 text-black'>
       <div className='flex gap-4 cursor-pointer rounded-2xl px-3 py-2 text-xl font-semibold text-white '>
         <h2 className='text-green-500 md:text-black scale-100 transition-all duration-200 hover:scale-110'>
-          Logo
+          <TbBooks size={35} />
         </h2>
         <div>
           <h2 className='text-green-500 md:text-black text-lg font-semibold'>
