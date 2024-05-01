@@ -10,7 +10,7 @@ import "./style.css";
 
 const LeftSideBar = () => {
   return (
-    <div className='w-28 bg-white flex flex-col items-center gap-5 px-6 mt-12'>
+    <div className='hidden md:flex w-28 bg-white flex-col items-center gap-5 px-6 mt-12'>
       <NavLink
         to='/'
         className='w-full h-14 mx-auto flex flex-col group cursor-pointer items-center justify-center hover:bg-white rounded-md'
