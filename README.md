@@ -33,7 +33,7 @@
 ## License
 
 This project is licensed under the [হাদিস সমূহ Demo](LICENSE).
-This project live link [https://paypal-payment-integration.netlify.app/](LInk).
+This project live link [https://warm-sawine-a30a7d.netlify.app](LInk).
 
 ## Contact
 
