@@ -1,4 +1,4 @@
-# Paypal payment Integration
+# হাদিস সমূহ Design Pages
 
 ## Table of Contents
 
@@ -12,33 +12,19 @@
 ## Features
 
 - Home Page
-- LogIn Page
-- Registration Page
-- User authentication for personalized experience
-- User registration for personalized experience
 - Responsive design for various devices
-
-## User Panel
-
-- User Profile
 
 ## Technologies Used
 
 - React.js
 - Tailwind CSS
-- Firebase (for authentication)
-- Sweet alert2
 - React icons
-- PayPal Payment Gateway
-- React Helmet
-- React-Modal
 
 ## Installation
 
 1. Clone the repository.
 2. Install dependencies using `npm install`.
-3. Configure Firebase for authentication and data storage.
-4. Run the application using `npm start`.
+3. Run the application using `npm run dev`.
 
 ## Usage
 
@@ -46,7 +32,7 @@
 
 ## License
 
-This project is licensed under the [Paypal payment demo](LICENSE).
+This project is licensed under the [হাদিস সমূহ Demo](LICENSE).
 This project live link [https://paypal-payment-integration.netlify.app/](LInk).
 
 ## Contact
