@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { IoIosSettings } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
+import "./sidebar.css";
 
 const Navbar = () => {
   const [openModal, setOpenModal] = useState(false);
   const [openRightSidebar, setRightSidebar] = useState(false);
 
   return (
-    <nav className='flex items-center justify-between bg-white px-4 py-2 text-black mb-24'>
+    <nav className='flex items-center justify-between bg-white px-4 py-2 text-black'>
       <div className='flex gap-4 cursor-pointer rounded-2xl px-3 py-2 text-xl font-semibold text-white '>
         <h2 className='text-green-500 md:text-black scale-100 transition-all duration-200 hover:scale-110'>
           Logo
@@ -21,7 +22,7 @@ const Navbar = () => {
           </h4>
         </div>
       </div>
-      <div className='flex items-center justify-between gap-5 md:gap-10'>
+      <div className='flex items-center justify-between gap-2 md:gap-5'>
         <div className='rounded-lg invisible md:visible border-2 w-12 h-10 md:w-56 md:h-12 flex justify-between items-center'>
           <div className='flex w-14 h-10 justify-center items-center'>
             <CiSearch className='text-2xl text-black' />
@@ -34,7 +35,7 @@ const Navbar = () => {
         </div>
         <button
           onClick={() => setOpenModal(true)}
-          className='p-2 bg-gray-300 border rounded-xl'
+          className='p-2 bg-gray-300 border rounded-xl visible md:invisible'
         >
           <CiSearch className='text-2xl text-black' />
         </button>
@@ -117,58 +118,84 @@ const Navbar = () => {
                 সার্চ করুন
               </button>
             </div>
-
           </div>
         </div>
       </div>
 
       {/* right side menu ber modal */}
       <div
-        className={`fixed z-[100] flex items-center justify-end ${
-          openRightSidebar ? "opacity-1 visible" : "invisible opacity-0"
-        } inset-0 bg-black/20 backdrop-blur-sm duration-100`}
+        className={`fixed z-[100] inset-0 bg-black/20 backdrop-blur-sm duration-100 ${
+          openRightSidebar ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
       >
         <div
-          className={`absolute min-w-[350px] rounded-lg bg-white p-5 pb-5 text-center drop-shadow-2xl dark:bg-gray-800 dark:text-white ${
+          className={`absolute right-0 min-w-[350px] rounded-lg bg-white p-5 pb-5 text-center drop-shadow-2xl dark:bg-gray-800 dark:text-white ${
             openRightSidebar
-              ? "-translate-x-100 opacity-1 duration-300"
-              : "translate-x-100 opacity-0 duration-150"
-          } min-h-full rounded-none`}
+              ? "translate-x-0 opacity-100 duration-300"
+              : "translate-x-full opacity-0 duration-150"
+          } rounded-none min-h-full`}
         >
-       <div className="flex justify-between items-center gap-5 w-full">
-       <h4 className="text-xl font-semibold">সেটিংস</h4>
-          <svg
-            onClick={() => setRightSidebar(false)}
-            className='mx-auto mr-0 w-8 cursor-pointer fill-black dark:fill-white'
-            viewBox='0 0 24 24'
-            fill='none'
-            xmlns='http://www.w3.org/2000/svg'
-          >
-            <g strokeWidth='0'></g>
-            <g strokeLinecap='round' strokeLinejoin='round'></g>
-            <g>
+          <div className='flex justify-between items-center gap-5 w-full'>
+            <h4 className='text-xl font-semibold'>সেটিংস</h4>
+            <svg
+              onClick={() => setRightSidebar(false)}
+              className='w-8 cursor-pointer fill-black dark:fill-white'
+              viewBox='0 0 24 24'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
               <path d='M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z'></path>
-            </g>
-          </svg>
-       </div>
-       <div className="mt-14 w-full">
-       <label
-                  htmlFor='default'
-                  className='block mb-2 text-sm font-semibold text-left text-gray-900 dark:text-white'
-                >
-                  আরবি ফন্ট সিলেক্ট করুন
-                </label>
-                <select
-                  id='default'
-                  className='bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-white focus:border-white block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-                >
-                  <option selected>Me Quran</option>
-                  <option value='Me Quran'>Me Quran</option>
-                  <option value='KFGQ'>KFGQ</option>
-                  <option value='Al Mushaf'>Al Mushaf</option>
-                  <option value='Amiri'>Amiri</option>
-                </select>
-       </div>
+            </svg>
+          </div>
+          <div className='mt-5 w-full overflow-y-scroll max-h-[80vh]'>
+            <label
+              htmlFor='default'
+              className='block mb-2 text-sm font-semibold text-left text-gray-900 dark:text-white'
+            >
+              আরবি ফন্ট সিলেক্ট করুন
+            </label>
+            <select
+              id='default'
+              className='bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-white focus:border-white block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+            >
+              <option selected>Me Quran</option>
+              <option value='Me Quran'>Me Quran</option>
+              <option value='KFGQ'>KFGQ</option>
+              <option value='Al Mushaf'>Al Mushaf</option>
+              <option value='Amiri'>Amiri</option>
+            </select>
+            <h4 className='text-sm font-semibold text-left mt-10 mb-5'>
+              আরবিক ফন্ট সাইজ
+            </h4>
+            <input type='range' className='w-full bg-[#2B9E76]' />
+            <h4 className='text-sm font-semibold text-left my-5'>
+              অনুবাদ ফন্ট সাইজ
+            </h4>
+            <input type='range' className='w-full bg-[#2B9E76]' />
+            <div className='flex justify-between items-center mt-5'>
+              <p className='font-semibold'>Night Mode</p>
+              <label className='inline-flex items-center cursor-pointer'>
+                <input type='checkbox' value='' className='sr-only peer' />
+                <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+              </label>
+            </div>
+            <div className='w-72 mx-auto mt-5 bg-[#2B9E76] p-3 text-left rounded-lg'>
+              <h4 className='text-xl font-base mt-3 text-white'>
+                আপনিও সদাকায়ে জারিয়াতে অংশ নিন
+              </h4>
+              <p className='text-sm font-medium text-white text-justify mt-3'>
+                আপনার দান, সেটা ছোট হলেও, ইসলামের বার্তা ও হাদিস প্রচারে সহায়তা
+                করবে। আমাদের কাজের অংশ হতে এবং এই গুরুত্বপূর্ণ কাজে সাহায্য করতে
+                আমাদের প্রজেক্টে হাদিয়া দিন। ইনশাআল্লাহ এটি সদাকায়ে জারিয়াহ
+                হিসেবে আল্লাহ্‌র কাছে কবুল হবে।
+              </p>
+              <div className='flex justify-center items-center mt-3'>
+                <button className='px-5 py-3 bg-white/90 rounded-2xl text-[#2B9E76]'>
+                  সাপোর্ট করুন
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
