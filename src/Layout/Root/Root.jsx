@@ -5,7 +5,7 @@ import MobileNavbar from "../LeftSideBar/MobileResponsiveBottomBar";
 
 const Root = () => {
   return (
-    <div>
+    <div className="w-full">
       <Navbar></Navbar>
       <div className='flex flex-col md:flex-row'>
         <LeftSideBar></LeftSideBar>

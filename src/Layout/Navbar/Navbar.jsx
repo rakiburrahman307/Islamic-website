@@ -9,7 +9,7 @@ const Navbar = () => {
   const [openRightSidebar, setRightSidebar] = useState(false);
 
   return (
-    <nav className='flex items-center justify-between bg-white px-4 py-2 text-black'>
+    <nav className='flex w-full items-center justify-between bg-white px-4 py-2 text-black'>
       <div className='flex gap-4 cursor-pointer rounded-2xl px-3 py-2 text-xl font-semibold text-white '>
         <h2 className='text-green-500 md:text-black scale-100 transition-all duration-200 hover:scale-110'>
           <TbBooks size={35} />
