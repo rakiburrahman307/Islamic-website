@@ -14,7 +14,7 @@ const BookShelf = () => {
   ];
 
   return (
-    <div className='hidden md:flex md:flex-col md:w-[30%] bg-white mt-5 ml-5 rounded-md pb-3'>
+    <div className='hidden md:flex md:flex-col md:w-[30%] bg-white mt-0 md:mt-5 ml-0 md:ml-5 rounded-md pb-3'>
       <div className='flex justify-around border-b-2 items-center'>
         <button className='w-full h-14 text-white bg-[#2B9E76] rounded-tl-xl'>
           বই

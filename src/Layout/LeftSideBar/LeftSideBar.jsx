@@ -13,7 +13,7 @@ const LeftSideBar = () => {
     <div className='hidden md:flex w-28 bg-white flex-col items-center gap-5 px-6 mt-12'>
       <NavLink
         to='/'
-        className='w-full h-14 mx-auto flex flex-col group cursor-pointer items-center justify-center hover:bg-white rounded-md'
+        className='w-full px-8 h-14 mx-auto flex flex-col group cursor-pointer items-center justify-center hover:bg-white rounded-md'
       >
         <CiHome size={30} className='group-hover:text-[#2B9E76]' />
       </NavLink>

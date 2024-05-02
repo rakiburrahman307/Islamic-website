@@ -22,7 +22,7 @@ const TopScroll = () => {
   return (
     <div
       onClick={scrollToTop}
-      className={`fixed md:hidden lg:hidden group flex justify-center items-center bg-[#2B9E76] bottom-16 right-5 md:bottom-16 lg:bottom-10 lg:right-10  w-10 h-10 rounded-full text-center border-2 shadow-xl z-50 hover:bg-white/20 duration-200 cursor-pointer dark:bg-semi-dark`}
+      className={`fixed md:hidden lg:hidden group flex justify-center items-center bg-[#2B9E76] bottom-12 right-10 md:bottom-16 lg:bottom-10 lg:right-10  w-10 h-10 rounded-full text-center border-2 shadow-xl z-50 hover:bg-white/20 duration-200 cursor-pointer dark:bg-semi-dark`}
     >
       <FaArrowUp
         className={`text-white group-hover:text-[#2B9E76]`}

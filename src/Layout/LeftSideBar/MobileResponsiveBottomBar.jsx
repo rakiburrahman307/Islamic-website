@@ -7,8 +7,8 @@ import { NavLink } from "react-router-dom";
 const MobileNavbar = () => {
   return (
     <div className='fixed -bottom-7 w-full z-50 my-5 md:hidden lg:hidden'>
-      <div className='flex items-center top-4 h-16 w-full'>
-        <div className='group flex items-center justify-center bg-white py-3 w-1/4 h-full dark:bg-semi-dark dark:text-secondary-text-dark'>
+      <div className='flex items-center justify-center top-4 h-16 w-full'>
+        <div className='group flex items-center justify-center bg-white py-3 w-full h-full dark:bg-semi-dark dark:text-secondary-text-dark'>
           <NavLink to='/' className='flex flex-col items-center'>
             <IoMdHome
               size={25}
@@ -21,7 +21,7 @@ const MobileNavbar = () => {
             </h4>
           </NavLink>
         </div>
-        <div className='group flex items-center justify-center bg-white py-3 w-1/4 h-full dark:bg-semi-dark dark:text-secondary-text-dark'>
+        <div className='group flex items-center justify-center bg-white py-3 w-full h-full dark:bg-semi-dark dark:text-secondary-text-dark'>
           <NavLink to='/category' className='flex flex-col items-center'>
             <TbBooks
               size={25}
@@ -34,7 +34,7 @@ const MobileNavbar = () => {
             </h4>
           </NavLink>
         </div>
-        <div className='group flex items-center justify-center bg-white py-3 w-1/4 h-full dark:bg-semi-dark dark:text-secondary-text-dark'>
+        <div className='group flex items-center justify-center bg-white py-3 w-full h-full dark:bg-semi-dark dark:text-secondary-text-dark'>
           <NavLink to='/cart' className='flex flex-col items-center'>
             <IoBookOutline
               size={25}
@@ -47,7 +47,7 @@ const MobileNavbar = () => {
             </h4>
           </NavLink>
         </div>
-        <div className='group flex items-center justify-center bg-white py-3 w-1/4 h-full dark:bg-semi-dark dark:text-secondary-text-dark'>
+        <div className='group flex items-center justify-center bg-white py-3 w-full h-full dark:bg-semi-dark dark:text-secondary-text-dark'>
           <NavLink to='/login' className='flex flex-col items-center'>
             <CiBookmark
               size={25}

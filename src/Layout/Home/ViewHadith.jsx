@@ -22,7 +22,7 @@ const ViewHadith = () => {
     { id: 10, title: "ওহীর সূচনা অধ্যায়", body: "হাদিসের রেঞ্জ: ১ - ৭" },
   ];
   return (
-    <div className='w-full md:w-[68%] bg-[#F2F4F6] mt-5 overflow-y-scroll max-h-[86vh] rounded-md'>
+    <div className='md:w-[70%] bg-[#F2F4F6] mt-5 overflow-y-scroll max-h-[86vh] rounded-md'>
       <div
         onClick={() => setLeftSidebar(true)}
         className='flex gap-3 bg-white p-5 rounded-xl mb-5 md:hidden lg:hidden'

@@ -4,7 +4,7 @@ import BookShelf from "./bookShelf";
 
 const Home = () => {
   return (
-    <div className='bg-[#F2F4F6] w-full md:rounded-tl-3xl flex gap-5'>
+    <div className='bg-[#F2F4F6] w-full md:rounded-tl-3xl md:flex md:gap-5'>
       <BookShelf />
       <TopScroll/>
       <ViewHadith />
